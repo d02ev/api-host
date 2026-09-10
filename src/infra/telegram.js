@@ -1,5 +1,5 @@
-import TelegramBot from 'node-telegram-bot-api';
+import { Bot } from 'grammy';
 
-export const createTelegram = config => {
-    return new TelegramBot(config.token, { polling: false });
+export const createTelegram = (config) => {
+  return new Bot(config.token);
 };
